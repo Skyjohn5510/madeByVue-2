@@ -4,14 +4,17 @@ import App from './App.vue'
 import Vuetify from 'vuetify'
 import 'vuetify/src/stylus/app.styl'
 
+import store from './store/appStore'
+import router from  './router.vue'
 
 Vue.config.productionTip = false
 
-
 Vue.use(App);
 Vue.use(Vuetify);
-var vm = new Vue({
+new Vue({
     el: '#app',
+    store,
+    router,
     data:{
         titleApp:"taesting"
     },
